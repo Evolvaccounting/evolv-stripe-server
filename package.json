@@ -1,0 +1,13 @@
+{
+  "name": "evolv-stripe-server",
+  "version": "1.0.0",
+  "main": "stripe_server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^14.0.0",
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "start": "node stripe_server.js"
+  }
+}
