@@ -1,0 +1,906 @@
+< i id="registered-title" id="addr-tip" id="itin-tip"d=" id="success-btn"success-p"!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evolv Accounting & Finance — Abra sua empresa nos EUA</title>
+<meta name="description" content="Abertura de LLC, Corporation e ITIN nos EUA. 100% online, em português. Evolv Accounting & Finance — Windermere, FL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --green:#1B3D35;
+  --green2:#254d43;
+  --gold:#BFA14A;
+  --gold-light:#E8D49A;
+  --gold-bg:#FBF8F0;
+  --bg:#F8F7F4;
+  --white:#FFFFFF;
+  --border:#E0DDD6;
+  --muted:#7A7570;
+  --radius:12px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--green);min-height:100vh;}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-icon{width:40px;height:40px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+.nav-e{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#fff;line-height:1;}
+.nav-arr{position:absolute;top:4px;right:5px;color:var(--gold);font-size:11px;font-weight:700;}
+.nav-text{display:flex;flex-direction:column;line-height:1.15;}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--green);}
+.nav-sub{font-size:8px;font-weight:600;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;}
+.nav-tagline{font-size:10px;color:var(--muted);font-style:italic;}
+.nav-btn{background:var(--green);color:var(--white);font-size:13px;font-weight:500;padding:10px 24px;border-radius:50px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;text-decoration:none;}
+.nav-btn:hover{background:var(--green2);}
+
+/* HERO */
+.hero{text-align:center;padding:80px 24px 64px;max-width:720px;margin:0 auto;}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:var(--gold-bg);border:1px solid rgba(191,161,74,.35);border-radius:50px;padding:6px 18px;font-size:12px;font-weight:500;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;line-height:1.1;color:var(--green);margin-bottom:16px;letter-spacing:-.5px;}
+.hero h1 em{color:var(--gold);font-style:normal;}
+.hero p{font-size:16px;color:var(--muted);line-height:1.7;max-width:460px;margin:0 auto 36px;}
+
+/* STATS */
+.stats-row{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white);}
+.stat-item{text-align:center;}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--green);}
+.stat-l{font-size:12px;color:var(--muted);margin-top:2px;}
+
+/* FORM SECTION */
+.form-wrap{max-width:620px;margin:0 auto;padding:52px 24px 80px;}
+.form-top{text-align:center;margin-bottom:28px;}
+.form-top h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--green);margin-bottom:6px;}
+.form-top p{font-size:14px;color:var(--muted);}
+.form-card{background:var(--white);border-radius:20px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 28px rgba(27,61,53,.07);}
+.progress-bar{height:3px;background:var(--border);}
+.progress-fill{height:100%;background:var(--gold);transition:width .4s;}
+.step-header{padding:28px 32px 0;}
+.step-label{font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--green);}
+.form-body{padding:26px 32px 32px;}
+.field-group{margin-bottom:18px;}
+.field-label{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.field-num{width:18px;height:18px;background:var(--green);color:#fff;border-radius:50%;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.field-input{width:100%;padding:13px 16px;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--green);outline:none;transition:border-color .2s,background .2s;}
+.field-input:focus{border-color:var(--green);background:var(--white);}
+.field-input::placeholder{color:#B5B0A8;}
+.field-select{width:100%;padding:13px 16px;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--green);outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237A7570' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;cursor:pointer;transition:border-color .2s;}
+.field-select:focus{border-color:var(--green);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.type-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.type-pill{padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:all .18s;background:var(--bg);}
+.type-pill:hover{border-color:var(--green);}
+.type-pill.selected{border-color:var(--green);background:var(--green);color:#fff;}
+.pname{font-weight:600;font-size:14px;color:var(--green);}
+.type-pill.selected .pname{color:#fff;}
+.ptag{font-size:11px;color:var(--muted);margin-top:2px;}
+.type-pill.selected .ptag{color:rgba(255,255,255,.5);}
+.loc-list{display:flex;flex-direction:column;gap:10px;}
+.loc-item{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:all .18s;background:var(--bg);}
+.loc-item:hover{border-color:var(--green);}
+.loc-item.selected{border-color:var(--green);background:var(--green);color:#fff;}
+.loc-left{display:flex;align-items:center;gap:12px;}
+.loc-flag{font-size:20px;}
+.loc-name{font-weight:600;font-size:14px;color:var(--green);}
+.loc-item.selected .loc-name{color:#fff;}
+.loc-desc{font-size:11px;color:var(--muted);margin-top:2px;}
+.loc-item.selected .loc-desc{color:rgba(255,255,255,.5);}
+.loc-price{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold);}
+.loc-badge{font-size:10px;font-weight:600;background:rgba(191,161,74,.15);color:var(--gold);padding:2px 8px;border-radius:50px;border:1px solid rgba(191,161,74,.3);margin-left:6px;vertical-align:middle;}
+.summary-box{background:var(--bg);border-radius:12px;padding:18px 20px;margin-bottom:24px;border:1px solid var(--border);}
+.sum-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;}
+.sum-label{color:var(--muted);}
+.sum-val{font-weight:500;}
+.sum-divider{border:none;border-top:1px solid var(--border);margin:12px 0;}
+.sum-total-row{display:flex;justify-content:space-between;align-items:center;}
+.sum-total-label{font-weight:600;font-size:15px;}
+.sum-total-val{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--gold);}
+.card-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.btn-primary{width:100%;padding:15px;background:var(--green);border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s,transform .1s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;}
+.btn-primary:hover{background:var(--green2);}
+.btn-primary:active{transform:scale(.99);}
+.btn-back{width:100%;padding:12px;background:transparent;border:1.5px solid var(--border);border-radius:10px;color:var(--muted);font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:border-color .2s;margin-top:10px;}
+.btn-back:hover{border-color:var(--green);color:var(--green);}
+.security-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:16px;font-size:12px;color:var(--muted);}
+.brands{display:flex;gap:6px;justify-content:center;margin-top:10px;}
+.brand-pill{padding:4px 10px;border:1px solid var(--border);border-radius:6px;font-size:10px;font-weight:600;color:var(--muted);background:var(--bg);}
+.itin-tip{background:var(--gold-bg);border-radius:10px;padding:14px 16px;border:1px solid rgba(191,161,74,.2);font-size:13px;color:var(--muted);line-height:1.6;margin-top:14px;}
+
+/* SUCCESS */
+.success-wrap{text-align:center;padding:56px 32px;}
+.success-circle{width:72px;height:72px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:30px;color:#fff;}
+.success-wrap h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--green);margin-bottom:10px;}
+.success-wrap p{color:var(--muted);font-size:15px;line-height:1.7;max-width:360px;margin:0 auto 28px;}
+
+/* FEATURES */
+.features{max-width:860px;margin:0 auto;padding:64px 24px;}
+.features h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;text-align:center;color:var(--green);margin-bottom:6px;}
+.features-sub{text-align:center;color:var(--muted);font-size:15px;margin-bottom:36px;}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;}
+.feat-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;}
+.feat-icon{width:40px;height:40px;background:var(--gold-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px;border:1px solid rgba(191,161,74,.2);}
+.feat-title{font-weight:600;font-size:14px;color:var(--green);margin-bottom:6px;}
+.feat-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* FOOTER */
+footer{background:var(--green);color:rgba(255,255,255,.65);text-align:center;padding:44px 24px;font-size:13px;}
+.footer-logo{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;}
+.footer-icon{width:42px;height:42px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.15);position:relative;flex-shrink:0;}
+.footer-e{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#fff;line-height:1;}
+.footer-arr{position:absolute;top:4px;right:5px;color:var(--gold);font-size:11px;}
+.footer-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;}
+.footer-sub{font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,.4);text-transform:uppercase;}
+.footer-tag{font-style:italic;color:rgba(255,255,255,.4);font-size:13px;margin-bottom:14px;}
+footer a{color:var(--gold-light);}
+
+.step{display:none;}
+.step.active{display:block;}
+
+@media(max-width:580px){
+  nav{padding:12px 16px;}
+  .nav-tagline{display:none;}
+  .nav-btn{display:none;}
+  .lang-switcher{display:flex !important;}
+  .type-grid,.field-row,.card-row{grid-template-columns:1fr;}
+  .form-body{padding:20px 18px 24px;}
+  .step-header{padding:20px 18px 0;}
+  .stats-row{gap:24px;}
+  .hero h1{font-size:2rem;}
+  .features{padding:44px 16px;}
+}
+
+.lang-switcher{display:flex;gap:6px;align-items:center;margin-right:8px;}
+.lang-btn{background:#f5f5f5;border:1.5px solid #ddd;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;padding:5px 8px;transition:all .2s;line-height:1;color:#333;display:flex;align-items:center;gap:3px;}
+.lang-btn:hover{border-color:var(--gold);background:#faf8f0;}
+.lang-btn.active{border-color:var(--gold);background:rgba(191,161,74,.15);color:var(--green);}
+</style>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+const T = {
+  pt: {
+    'nav-cta': 'Começar agora',
+    'hero-tag': '🇺🇸 U.S. Company Formation',
+    'hero-h1': 'Abra sua empresa<br>nos <em>EUA</em> em minutos',
+    'hero-p': 'Processo 100% online, em português. Escolha o estado, preencha seus dados e pague com segurança.',
+    'hero-btn': 'Abrir minha empresa agora →',
+    'hero-btn2': 'Falar no WhatsApp',
+    'form-title': 'Comece sua abertura de empresa',
+    'form-top-title': 'Registre sua empresa agora',
+    'form-top-desc': 'Preencha os dados abaixo e nossa equipe cuida de tudo para você',
+    'step1-label': 'Dados da Empresa',
+    'step2-label': 'Seus Dados',
+    'step3-label': 'Add-ons',
+    'step4-label': 'Pagamento',
+    'field-bizname': 'Nome da empresa (1ª opção)',
+    'field-bizname2': 'Nome da empresa (2ª opção)',
+    'pill-llc-tag': 'Mais escolhido',
+    'pill-corp-tag': 'Para investidores',
+    'pill-llc-tag': 'Más elegido',
+    'pill-corp-tag': 'Para inversores',
+    'field-type': 'Tipo de empresa',
+    'field-industry': 'Setor de atuação',
+    'field-state': 'Estado de abertura',
+    'btn-step2': 'Continuar →',
+    'field-name': 'Nome completo *',
+    'field-email': 'E-mail *',
+    'field-phone': 'Telefone / WhatsApp',
+    'field-country': 'País de residência',
+    'field-addr': 'Endereço completo',
+    'btn-step3': 'Continuar →',
+    'addon-title': 'Serviços adicionais',
+    'itin-name': 'ITIN Number',
+    'itin-desc': 'Número de identificação fiscal nos EUA',
+    'itin-tip': '💡 O ITIN é necessário para abrir conta bancária nos EUA e declarar impostos.',
+    'addr-name': 'Virtual Address',
+    'addr-desc': 'Endereço comercial profissional em Windermere, FL',
+    'addr-tip': '💡 Um endereço virtual dá presença profissional na Flórida — ideal para quem precisa de endereço registrado.',
+    'btn-step4': 'Continuar para pagamento →',
+    'sum-title': 'Resumo do pedido',
+    'pay-btn': '🔒 Finalizar pagamento',
+    'btn-back3': '← Voltar',
+    'security-row': '🔒 Pagamento protegido por SSL 256-bit via Stripe',
+    'success-h2': 'Pedido confirmado!',
+    'success-p': 'Obrigado pela confiança! Nossa equipe entrará em contato em até <strong style="color:var(--green);">24 horas</strong> pelo e-mail e WhatsApp para iniciar o processo.',
+    'success-btn': 'Contratar outro serviço',
+    'features-h2': 'Por que a Evolv?',
+    'features-p': 'Especialistas em abertura de empresas nos EUA para brasileiros',
+    'feat1-title': '100% online',
+    'feat1-desc': 'Tudo resolvido à distância, de qualquer lugar do mundo, sem burocracia presencial.',
+    'feat2-title': 'Em português',
+    'feat2-desc': 'Equipe bilíngue pronta para tirar todas as suas dúvidas com clareza e agilidade.',
+    'feat3-title': 'Processo rápido',
+    'feat3-desc': 'Sua empresa registrada em até 48h após a confirmação dos documentos.',
+    'feat4-title': 'Suporte completo',
+    'feat4-desc': 'EIN, Registered Agent, conta bancária — acompanhamos você do início ao fim.',
+    'registered-title': 'Registered Agent incluso na abertura — sem custo adicional!',
+    'registered-desc': 'Todo processo de abertura já inclui o serviço de <strong>Registered Agent</strong> no primeiro ano. Nos anos seguintes, a renovação anual é cobrada separadamente — mas você estará em boas mãos com a Evolv cuidando de tudo. ✅',
+    'footer-tag': 'Evolving success through strategy.',
+    'footer-copy': '© 2026 Evolv Accounting & Finance. Todos os direitos reservados.',
+  },
+  es: {
+    'nav-cta': 'Comenzar ahora',
+    'hero-tag': '🇺🇸 Formación de Empresas en EE.UU.',
+    'hero-h1': 'Abre tu empresa<br>en <em>EE.UU.</em> en minutos',
+    'hero-p': 'Proceso 100% online. Elige el estado, completa tus datos y paga de forma segura.',
+    'hero-btn': 'Abrir mi empresa ahora →',
+    'hero-btn2': 'Chatear en WhatsApp',
+    'form-title': 'Comienza la apertura de tu empresa',
+    'form-top-title': 'Registra tu empresa ahora',
+    'form-top-desc': 'Completa los datos a continuación y nuestro equipo se encargará de todo',
+    'step1-label': 'Datos de la Empresa',
+    'step2-label': 'Tus Datos',
+    'step3-label': 'Servicios Adicionales',
+    'step4-label': 'Pago',
+    'field-bizname': 'Nombre de la empresa (1ª opción)',
+    'field-bizname2': 'Nombre de la empresa (2ª opción)',
+    'pill-llc-tag': 'Mais escolhido',
+    'pill-corp-tag': 'Para investidores',
+    'pill-llc-tag': 'Más elegido',
+    'pill-corp-tag': 'Para inversores',
+    'field-type': 'Tipo de empresa',
+    'field-industry': 'Sector',
+    'field-state': 'Estado de formación',
+    'btn-step2': 'Continuar →',
+    'field-name': 'Nombre completo *',
+    'field-email': 'Correo electrónico *',
+    'field-phone': 'Teléfono / WhatsApp',
+    'field-country': 'País de residencia',
+    'field-addr': 'Dirección completa',
+    'btn-step3': 'Continuar →',
+    'addon-title': 'Servicios adicionales',
+    'itin-name': 'Número ITIN',
+    'itin-desc': 'Número de identificación fiscal en EE.UU.',
+    'itin-tip': '💡 El ITIN es necesario para abrir una cuenta bancaria en EE.UU. y declarar impuestos.',
+    'addr-name': 'Dirección Virtual',
+    'addr-desc': 'Dirección comercial profesional en Windermere, FL',
+    'addr-tip': '💡 Una dirección virtual le da presencia profesional en Florida.',
+    'btn-step4': 'Continuar al pago →',
+    'sum-title': 'Resumen del pedido',
+    'pay-btn': '🔒 Completar pago',
+    'btn-back3': '← Volver',
+    'security-row': '🔒 Pago protegido con SSL de 256 bits vía Stripe',
+    'success-h2': '¡Pedido confirmado!',
+    'success-p': '¡Gracias por tu confianza! Nuestro equipo se pondrá en contacto en <strong style="color:var(--green);">24 horas</strong> por correo y WhatsApp.',
+    'success-btn': 'Contratar otro servicio',
+    'features-h2': '¿Por qué Evolv?',
+    'features-p': 'Especialistas en formación de empresas en EE.UU.',
+    'feat1-title': '100% online',
+    'feat1-desc': 'Todo gestionado a distancia, desde cualquier parte del mundo, sin burocracia presencial.',
+    'feat2-title': 'Soporte multilingüe',
+    'feat2-desc': 'Equipo bilingüe listo para responder todas tus preguntas con claridad y agilidad.',
+    'feat3-title': 'Proceso rápido',
+    'feat3-desc': 'Tu empresa registrada en 48h tras la confirmación de los documentos.',
+    'feat4-title': 'Soporte completo',
+    'feat4-desc': 'EIN, Agente Registrado, cuenta bancaria — te acompañamos de principio a fin.',
+    'registered-title': '¡Agente Registrado incluido — sin costo adicional!',
+    'registered-desc': 'Cada paquete de formación incluye el servicio de <strong>Agente Registrado</strong> durante el primer año. La renovación anual se cobra por separado en los años siguientes.',
+    'footer-tag': 'Evolving success through strategy.',
+    'footer-copy': '© 2026 Evolv Accounting & Finance. All rights reserved.',
+  },
+  en: {
+    'nav-cta': 'Get started',
+    'hero-tag': '🇺🇸 U.S. Company Formation',
+    'hero-h1': 'Open your company<br>in the <em>USA</em> in minutes',
+    'hero-p': '100% online process. Choose your state, fill in your details and pay securely.',
+    'hero-btn': 'Open my company now →',
+    'hero-btn2': 'Chat on WhatsApp',
+    'form-title': 'Start your company formation',
+    'form-top-title': 'Register your company now',
+    'form-top-desc': 'Fill in the details below and our team will take care of everything for you',
+    'step1-label': 'Business Details',
+    'step2-label': 'Your Details',
+    'step3-label': 'Add-ons',
+    'step4-label': 'Payment',
+    'field-bizname': 'Company name (1st option)',
+    'field-bizname2': 'Company name (2nd option)',
+    'pill-llc-tag': 'Most popular',
+    'pill-corp-tag': 'For investors',
+    'field-type': 'Business type',
+    'field-industry': 'Industry',
+    'field-state': 'State of formation',
+    'btn-step2': 'Continue →',
+    'field-name': 'Full name *',
+    'field-email': 'Email *',
+    'field-phone': 'Phone / WhatsApp',
+    'field-country': 'Country of residence',
+    'field-addr': 'Full address',
+    'btn-step3': 'Continue →',
+    'addon-title': 'Additional services',
+    'itin-name': 'ITIN Number',
+    'itin-desc': 'U.S. tax identification number',
+    'itin-tip': '💡 An ITIN is required to open a U.S. bank account and file taxes.',
+    'addr-name': 'Virtual Address',
+    'addr-desc': 'Professional business address in Windermere, FL',
+    'addr-tip': '💡 A virtual address gives your business a professional presence in Florida.',
+    'btn-step4': 'Continue to payment →',
+    'sum-title': 'Order summary',
+    'pay-btn': '🔒 Complete payment',
+    'btn-back3': '← Back',
+    'security-row': '🔒 Payment secured by 256-bit SSL via Stripe',
+    'success-h2': 'Order confirmed!',
+    'success-p': 'Thank you for your trust! Our team will contact you within <strong style="color:var(--green);">24 hours</strong> by email and WhatsApp to start the process.',
+    'success-btn': 'Order another service',
+    'features-h2': 'Why Evolv?',
+    'features-p': 'Specialists in U.S. company formation',
+    'feat1-title': '100% online',
+    'feat1-desc': 'Everything handled remotely, from anywhere in the world, with no in-person bureaucracy.',
+    'feat2-title': 'Bilingual support',
+    'feat2-desc': 'Bilingual team ready to answer all your questions clearly and efficiently.',
+    'feat3-title': 'Fast process',
+    'feat3-desc': 'Your company registered within 48h after document confirmation.',
+    'feat4-title': 'Full support',
+    'feat4-desc': 'EIN, Registered Agent, bank account — we guide you from start to finish.',
+    'registered-title': 'Registered Agent included — no extra charge!',
+    'registered-desc': 'Every formation package includes <strong>Registered Agent</strong> service for the first year. Annual renewal is billed separately in following years.',
+    'footer-tag': 'Evolving success through strategy.',
+    'footer-copy': '© 2026 Evolv Accounting & Finance. Todos los derechos reservados.',,
+  }
+};
+
+let currentLang = 'pt';
+
+function setLang(lang) {
+  if (!T[lang]) return;
+  currentLang = lang;
+  ['pt','en','es'].forEach(l => {
+    const btn = document.getElementById('lang-'+l);
+    if(btn) btn.classList.toggle('active', l === lang);
+  });
+  
+  // Update all translatable elements
+  Object.keys(T[lang]).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = T[lang][id];
+  });
+
+  // Update placeholders
+  if (lang === 'en') {
+    document.getElementById('biz1').placeholder = 'e.g. Evolv Solutions';
+    document.getElementById('biz2').placeholder = 'e.g. Evolv Group';
+    document.getElementById('p-name').placeholder = 'Your full name';
+    document.getElementById('p-email').placeholder = 'your@email.com';
+    document.getElementById('p-phone').placeholder = '+1 (000) 000-0000';
+    document.getElementById('p-addr').placeholder = 'Street, City, State, ZIP';
+  } else if (lang === 'es') {
+    document.getElementById('biz1').placeholder = 'Ej: Evolv Solutions';
+    document.getElementById('biz2').placeholder = 'Ej: Evolv Group';
+    document.getElementById('p-name').placeholder = 'Tu nombre completo';
+    document.getElementById('p-email').placeholder = 'tu@email.com';
+    document.getElementById('p-phone').placeholder = '+1 (000) 000-0000';
+    document.getElementById('p-addr').placeholder = 'Calle, Ciudad, Estado, ZIP';
+  } else {
+    document.getElementById('biz1').placeholder = 'Ex: Evolv Solutions';
+    document.getElementById('biz2').placeholder = 'Ex: Evolv Group';
+    document.getElementById('p-name').placeholder = 'Seu nome completo';
+    document.getElementById('p-email').placeholder = 'seu@email.com';
+    document.getElementById('p-phone').placeholder = '+55 (11) 99999-9999';
+    document.getElementById('p-addr').placeholder = 'Rua, Cidade, Estado, CEP';
+  }
+
+  // Update loc descriptions
+  const locDescs = {
+    'loc-fl': { pt: 'Ideal para quem opera na Flórida', en: 'Ideal for businesses operating in Florida', es: 'Ideal para negocios que operan en Florida' },
+    'loc-de': { pt: 'Preferido por startups e investidores', en: 'Preferred by startups and investors', es: 'Preferido por startups e inversores' },
+    'loc-wy': { pt: 'Sem imposto estadual sobre renda', en: 'No state income tax', es: 'Sin impuesto estatal sobre la renta' },
+  };
+  Object.keys(locDescs).forEach(id => {
+    const el = document.querySelector('#' + id + ' .loc-desc');
+    if (el) el.textContent = locDescs[id][lang];
+  });
+
+  // Update industry options
+  const industry = document.getElementById('industry');
+  if (industry) {
+    const opts = {
+      pt: ['Selecione o setor','Tecnologia / Software','Consultoria / Serviços','E-commerce / Varejo','Imóveis / Real Estate','Saúde / Bem-estar','Educação','Alimentação / Restaurante','Importação / Exportação','Construção','Finanças / Contabilidade','Marketing / Publicidade','Outro'],
+      en: ['Select industry','Technology / Software','Consulting / Services','E-commerce / Retail','Real Estate','Health / Wellness','Education','Food / Restaurant','Import / Export','Construction','Finance / Accounting','Marketing / Advertising','Other'],
+      es: ['Seleccione el sector','Tecnología / Software','Consultoría / Servicios','E-commerce / Retail','Bienes Raíces','Salud / Bienestar','Educación','Alimentación / Restaurante','Importación / Exportación','Construcción','Finanzas / Contabilidad','Marketing / Publicidad','Otro']
+    };
+    const current = industry.selectedIndex;
+    industry.innerHTML = opts[lang].map((o,i) => `<option value="${i===0?'':o}">${o}</option>`).join('');
+    industry.selectedIndex = current;
+  }
+
+  // Update footer contact labels
+  const footerLabels = {
+    pt: { phone: 'Telefone', fax: 'Fax', email: 'E-mail', web: 'Web', instagram: 'Instagram' },
+    en: { phone: 'Phone', fax: 'Fax', email: 'Email', web: 'Web', instagram: 'Instagram' },
+    es: { phone: 'Teléfono', fax: 'Fax', email: 'Correo', web: 'Web', instagram: 'Instagram' },
+  };
+  const fc = document.getElementById('footer-contacts');
+  if (fc && footerLabels[lang]) {
+    const l = footerLabels[lang];
+    fc.innerHTML = `
+      <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">${l.phone}</span>&nbsp; <a href="tel:+14076934450">+1 (407) 693-4450</a></span>
+      <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">${l.fax}</span>&nbsp; <span>(407) 584-9559</span></span>
+      <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">${l.email}</span>&nbsp; <a href="mailto:lya@evolvaccounting.com">lya@evolvaccounting.com</a></span>
+      <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">${l.web}</span>&nbsp; <a href="https://evolvaccounting.com">evolvaccounting.com</a></span>
+      <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">${l.instagram}</span>&nbsp; <a href="https://instagram.com/evolvaccountingandfinance">@evolvaccountingandfinance</a></span>
+    `;
+  }
+
+  // Update country options
+  const country = document.getElementById('p-country');
+  if (country) {
+    const selected = country.value;
+    const opts = {
+      pt: ['Selecione o país','Brasil','Estados Unidos','Portugal','Argentina','Colômbia','México','Outro'],
+      en: ['Select country','Brazil','United States','Portugal','Argentina','Colombia','Mexico','Other'],
+      es: ['Seleccione el país','Brasil','Estados Unidos','Portugal','Argentina','Colombia','México','Otro']
+    };
+    country.innerHTML = opts[lang].map(o => `<option value="${o}">${o}</option>`).join('');
+    country.value = selected || '';
+  }
+}
+
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="https://evolvaccounting.com">
+    <div class="nav-logo-icon">
+      <span class="nav-e">E</span>
+      <span class="nav-arr">↗</span>
+    </div>
+    <div class="nav-text">
+      <div class="nav-name">Evolv</div>
+      <div class="nav-sub">Accounting & Finance</div>
+      <div class="nav-tagline">Evolving success through strategy.</div>
+    </div>
+  </a>
+  <div class="lang-switcher">
+    <button class="lang-btn active" id="lang-pt" onclick="setLang('pt')" title="Português">🇧🇷 PT</button>
+    <button class="lang-btn" id="lang-en" onclick="setLang('en')" title="English">🇺🇸 EN</button>
+    <button class="lang-btn" id="lang-es" onclick="setLang('es')" title="Español">🇪🇸 ES</button>
+  </div>
+  <a class="nav-btn" id="nav-cta" href="#form-anchor">Começar agora</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag" id="hero-tag">🇺🇸 U.S. Company Formation</div>
+  <h1 id="hero-h1">Abra sua empresa<br>nos <em>EUA</em> em minutos</h1>
+  <p id="hero-p">Processo 100% online, em português. Escolha o estado, preencha seus dados e pague com segurança.</p>
+  <a class="nav-btn" href="#form-anchor" style="display:inline-flex;padding:14px 40px;border-radius:50px;font-size:15px;text-decoration:none;">Ver serviços &amp; preços →</a>
+</div>
+
+<div class="stats-row">
+  <div class="stat-item"><div class="stat-n">500+</div><div class="stat-l">Empresas abertas</div></div>
+  <div class="stat-item"><div class="stat-n">48h</div><div class="stat-l">Tempo médio</div></div>
+  <div class="stat-item"><div class="stat-n">5★</div><div class="stat-l">Avaliação média</div></div>
+  <div class="stat-item"><div class="stat-n">100%</div><div class="stat-l">Online</div></div>
+</div>
+
+<div id="form-anchor" class="form-wrap">
+  <div class="form-top">
+    <h2 id="form-top-title">Registre sua empresa agora</h2>
+    <p id="form-top-desc">Preencha os dados abaixo e nossa equipe cuida de tudo para você</p>
+  </div>
+  <div class="form-card">
+
+    <!-- STEP 1 -->
+    <div class="step active" id="s1">
+      <div class="progress-bar"><div class="progress-fill" style="width:25%"></div></div>
+      <div class="step-header">
+        <div class="step-label" id="step1-label">Passo 1 de 4</div>
+        <div class="step-title" id="form-title">Informações da empresa</div>
+      </div>
+      <div class="form-body">
+        <div class="field-group">
+          <div class="field-label" id="field-bizname"><span class="field-num">1</span> Nome da empresa (opção 1)</div>
+          <input class="field-input" id="biz1" type="text" placeholder="Ex: Evolv Solutions LLC">
+        </div>
+        <div class="field-group">
+          <div class="field-label" id="field-bizname2"><span class="field-num">2</span> Nome da empresa (opção 2)</div>
+          <input class="field-input" id="biz2" type="text" placeholder="Ex: Evolv Group LLC">
+        </div>
+        <div class="field-group">
+          <div class="field-label" id="field-type"><span class="field-num">3</span> Tipo de empresa</div>
+          <div class="type-grid">
+            <div class="type-pill selected" id="pill-llc" onclick="selectType('LLC')">
+              <div class="pname">LLC</div><div class="ptag" id="pill-llc-tag">Mais escolhido</div>
+            </div>
+            <div class="type-pill" id="pill-corp" onclick="selectType('C-Corp')">
+              <div class="pname">C-Corp</div><div class="ptag" id="pill-corp-tag">Para investidores</div>
+            </div>
+          </div>
+        </div>
+        <div class="field-group">
+          <div class="field-label"><span class="field-num">4</span> Setor da empresa</div>
+          <select class="field-select" id="industry">
+            <option value="">Selecione o setor...</option>
+            <option>Finanças e Seguros</option>
+            <option>Comércio / E-commerce</option>
+            <option>Tecnologia</option>
+            <option>Consultoria</option>
+            <option>Imóveis</option>
+            <option>Saúde</option>
+            <option>Construção</option>
+            <option>Transporte e Logística</option>
+            <option>Restaurante / Alimentos</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <div class="field-label" id="field-state"><span class="field-num">5</span> Estado de abertura</div>
+          <div class="loc-list">
+            <div class="loc-item" id="loc-test" onclick="selectLoc(this,'Test',1)" style="border:1.5px dashed #BFA14A;opacity:0.75;">
+              <div class="loc-left">
+                <div class="loc-flag">🧪</div>
+                <div>
+                  <div class="loc-name">Test Payment <span class="loc-badge">Interno</span></div>
+                  <div class="loc-desc">Apenas para teste interno — remover após uso</div>
+                </div>
+              </div>
+              <div class="loc-price">$1</div>
+            </div>
+            <div class="loc-item selected" id="loc-fl" onclick="selectLoc(this,'Florida',650)">
+              <div class="loc-left">
+                <div class="loc-flag">🌴</div>
+                <div>
+                  <div class="loc-name">Flórida <span class="loc-badge">Popular</span></div>
+                  <div class="loc-desc">Ideal para quem opera na Flórida</div>
+                </div>
+              </div>
+              <div class="loc-price">$650</div>
+            </div>
+            <div class="loc-item" id="loc-de" onclick="selectLoc(this,'Delaware',1200)">
+              <div class="loc-left">
+                <div class="loc-flag">💼</div>
+                <div>
+                  <div class="loc-name">Delaware</div>
+                  <div class="loc-desc">Preferido por startups e investidores</div>
+                </div>
+              </div>
+              <div class="loc-price">$1,200</div>
+            </div>
+            <div class="loc-item" id="loc-wy" onclick="selectLoc(this,'Wyoming',1200)">
+              <div class="loc-left">
+                <div class="loc-flag">🏔️</div>
+                <div>
+                  <div class="loc-name">Wyoming</div>
+                  <div class="loc-desc">Sem imposto estadual sobre renda</div>
+                </div>
+              </div>
+              <div class="loc-price">$1,200</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registered Agent Banner -->
+        <div style="margin-top:16px;background:linear-gradient(135deg,#f0fdf4,#fefce8);border:1px solid rgba(191,161,74,.3);border-radius:12px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;">
+          <div style="font-size:22px;flex-shrink:0;">🎁</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#1B3D35;margin-bottom:3px;" id="registered-title">Registered Agent incluso na abertura — sem custo adicional!</div>
+            <div id="registered-desc" style="font-size:12px;color:#5F5E5A;line-height:1.6;">Todo processo de abertura já inclui o serviço de <strong>Registered Agent</strong> no primeiro ano. Nos anos seguintes, a renovação anual é cobrada separadamente — mas você estará em boas mãos com a Evolv cuidando de tudo. ✅</div>
+          </div>
+        </div>
+
+        <button class="btn-primary" onclick="goStep(2)" id="btn-step2">Continuar →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="s2">
+      <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+      <div class="step-header">
+        <div class="step-label" id="step2-label">Passo 2 de 4</div>
+        <div class="step-title" id="step2-title">Seus dados pessoais</div>
+      </div>
+      <div class="form-body">
+        <div class="field-row">
+          <div class="field-group"><div class="field-label" id="field-name">Nome completo *</div><input class="field-input" id="p-name" type="text" placeholder="Seu nome completo"></div>
+          <div class="field-group"><div class="field-label" id="field-email">E-mail *</div><input class="field-input" id="p-email" type="email" placeholder="seu@email.com"></div>
+        </div>
+        <div class="field-row">
+          <div class="field-group"><div class="field-label" id="field-phone">WhatsApp *</div><input class="field-input" id="p-phone" type="tel" placeholder="+55 (11) 00000-0000"></div>
+          <div class="field-group"><div class="field-label" id="field-country">País de residência *</div>
+            <select class="field-select" id="p-country">
+              <option value="">Selecione...</option>
+              <option>Brasil</option>
+              <option>Estados Unidos</option>
+              <option>Portugal</option>
+              <option>Outro</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-group"><div class="field-label" id="field-addr">Endereço completo *</div><input class="field-input" id="p-addr" type="text" placeholder="Rua, número, cidade, estado, CEP, país"></div>
+        <div class="field-row">
+          <div class="field-group"><div class="field-label">Número de sócios</div>
+            <select class="field-select" id="p-partners">
+              <option>1 (sócio único)</option>
+              <option>2</option>
+              <option>3 ou mais</option>
+            </select>
+          </div>
+          <div class="field-group"><div class="field-label">Você já tem EIN?</div>
+            <select class="field-select" id="p-ein">
+              <option>Não, preciso solicitar</option>
+              <option>Sim, já tenho</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="goStep(3)" id="btn-step3">Continuar →</button>
+        <button class="btn-back" onclick="goStep(1)">← Voltar</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" id="s3">
+      <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
+      <div class="step-header">
+        <div class="step-label" id="step3-label">Passo 3 de 4</div>
+        <div class="step-title">Serviços adicionais</div>
+      </div>
+      <div class="form-body">
+        <p style="font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.6;">Deseja incluir algum serviço complementar ao seu pedido?</p>
+        <div class="loc-item" id="itin-card" onclick="toggleItin()">
+          <div class="loc-left">
+            <div class="loc-flag">🪪</div>
+            <div>
+              <div class="loc-name" id="itin-name">ITIN Number</div>
+              <div class="loc-desc">Identificação fiscal para não residentes</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="loc-price">$299</div>
+            <div id="itin-chk" style="width:20px;height:20px;border:1.5px solid var(--border);border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .2s;"></div>
+          </div>
+        </div>
+        <div class="itin-tip">💡 O ITIN é necessário para abrir conta bancária nos EUA e declarar impostos como não residente.</div>
+
+        <div class="loc-item" id="addr-card" onclick="toggleAddr()" style="margin-top:12px;">
+          <div class="loc-left">
+            <div class="loc-flag">🏢</div>
+            <div>
+              <div class="loc-name" id="addr-name">Virtual Address</div>
+              <div class="loc-desc">Professional business address in Windermere, FL</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="loc-price">$600<span style="font-size:10px;font-weight:400;">/yr</span></div>
+            <div id="addr-chk" style="width:20px;height:20px;border:1.5px solid var(--border);border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .2s;"></div>
+          </div>
+        </div>
+        <div class="itin-tip">💡 A virtual address gives your business a professional presence in Florida — ideal for clients who need a registered address without a physical office.</div>
+
+        <button class="btn-primary" style="margin-top:20px;" onclick="goStep(4)">Continuar para pagamento →</button>
+        <button class="btn-back" onclick="goStep(2)">← Voltar</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" id="s4">
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+      <div class="step-header">
+        <div class="step-label" id="step4-label">Passo 4 de 4</div>
+        <div class="step-title" id="step4-title">Pagamento seguro</div>
+      </div>
+      <div class="form-body">
+        <div class="summary-box">
+          <div class="sum-row"><span class="sum-label">Empresa</span><span class="sum-val" id="sum-biz">—</span></div>
+          <div class="sum-row"><span class="sum-label">Tipo</span><span class="sum-val" id="sum-type">—</span></div>
+          <div class="sum-row"><span class="sum-label">Estado</span><span class="sum-val" id="sum-loc">—</span></div>
+          <div class="sum-row" id="sum-itin-row" style="display:none;"><span class="sum-label">ITIN Number</span><span class="sum-val">+$299</span></div>
+          <div class="sum-row" id="sum-addr-row" style="display:none;"><span class="sum-label">Virtual Address</span><span class="sum-val">+$600/yr</span></div>
+          <hr class="sum-divider">
+          <div class="sum-total-row"><span class="sum-total-label">Total</span><span class="sum-total-val" id="sum-total">—</span></div>
+        </div>
+        <div id="stripe-element-wrap" style="margin-bottom:16px;">
+          <div id="payment-element" style="background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:16px;min-height:60px;"></div>
+          <div id="payment-message" style="color:#e53e3e;font-size:13px;margin-top:8px;display:none;"></div>
+        </div>
+        <button class="btn-primary" onclick="pay()" id="pay-btn" id="pay-btn-2" id="pay-btn">🔒 Finalizar pagamento</button>
+        <button class="btn-back" onclick="goStep(3)" id="btn-back3">← Voltar</button>
+        <div class="security-row" id="security-row" id="security-row">🔒 Pagamento protegido por SSL 256-bit via Stripe</div>
+        <div class="brands">
+          <div class="brand-pill">VISA</div>
+          <div class="brand-pill">MASTERCARD</div>
+          <div class="brand-pill">AMEX</div>
+          <div class="brand-pill">ZELLE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="step" id="s5">
+      <div class="success-wrap">
+        <div class="success-circle">✓</div>
+        <h2 id="success-h2">Pedido confirmado!</h2>
+        <p>Obrigado pela confiança! Nossa equipe entrará em contato em até <strong style="color:var(--green);">24 horas</strong> pelo e-mail e WhatsApp para iniciar o processo.</p>
+        <button class="btn-primary" style="max-width:260px;margin:0 auto;" onclick="resetAll()">Contratar outro serviço</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="features">
+    <h2 id="features-h2">Por que a Evolv?</h2>
+    <p class="features-sub" id="features-p">Especialistas em abertura de empresas nos EUA para brasileiros</p>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon">🌐</div><div class="feat-title" id="feat1-title">100% online</div><div class="feat-desc" id="feat1-desc">Tudo resolvido à distância, de qualquer lugar do mundo, sem burocracia presencial.</div></div>
+      <div class="feat-card"><div class="feat-icon">🇧🇷</div><div class="feat-title" id="feat2-title">Em português</div><div class="feat-desc" id="feat2-desc">Equipe bilíngue pronta para tirar todas as suas dúvidas com clareza e agilidade.</div></div>
+      <div class="feat-card"><div class="feat-icon">⚡</div><div class="feat-title" id="feat3-title">Processo rápido</div><div class="feat-desc" id="feat3-desc">Sua empresa registrada em até 48h após a confirmação dos documentos.</div></div>
+      <div class="feat-card"><div class="feat-icon">🛡️</div><div class="feat-title" id="feat4-title">Suporte completo</div><div class="feat-desc" id="feat4-desc">EIN, Registered Agent, conta bancária — acompanhamos você do início ao fim.</div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <div class="footer-icon">
+      <span class="footer-e">E</span>
+      <span class="footer-arr">↗</span>
+    </div>
+    <div>
+      <div class="footer-name">Evolv</div>
+      <div class="footer-sub">Accounting & Finance</div>
+    </div>
+  </div>
+  <div class="footer-tag" id="footer-tag">Evolving success through strategy.</div>
+  <div>Windermere, FL — United States</div>
+  <div id="footer-contacts" style="margin-top:10px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;">
+    <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">Phone</span>&nbsp; <a href="tel:+14076934450">+1 (407) 693-4450</a></span>
+    <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">Fax</span>&nbsp; <span>(407) 584-9559</span></span>
+    <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">Email</span>&nbsp; <a href="mailto:lya@evolvaccounting.com">lya@evolvaccounting.com</a></span>
+    <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">Web</span>&nbsp; <a href="https://evolvaccounting.com">evolvaccounting.com</a></span>
+    <span><span style="opacity:.45;letter-spacing:1px;font-size:11px;text-transform:uppercase;">Instagram</span>&nbsp; <a href="https://instagram.com/evolvaccountingandfinance">@evolvaccountingandfinance</a></span>
+  </div>
+  <div id="footer-copy" style="margin-top:16px;opacity:.35;font-size:12px;">© 2026 Evolv Accounting & Finance. Todos os direitos reservados.</div>
+</footer>
+
+<script>
+const STRIPE_PK = 'pk_live_51TPsyqH19YQGPUMhMysXJumwaM3I4D1ai3xV3RciNwklzxrMnSNlJOyxcFtWBKyFfQ4utESb8gWE3KZdEYrbrJsb00QV2rIplH';
+let stripe, elements;
+let selType='LLC', selLoc='Florida', selPrice=650, itinAdded=false, addrAdded=false;
+function selectType(t){
+  selType=t;
+  document.getElementById('pill-llc').classList.toggle('selected',t==='LLC');
+  document.getElementById('pill-corp').classList.toggle('selected',t==='C-Corp');
+}
+function selectLoc(el,loc,price){
+  document.querySelectorAll('.loc-item[id^="loc-"]').forEach(i=>i.classList.remove('selected'));
+  el.classList.add('selected');
+  selLoc=loc; selPrice=price;
+}
+function toggleItin(){
+  itinAdded=!itinAdded;
+  const card=document.getElementById('itin-card');
+  const chk=document.getElementById('itin-chk');
+  card.classList.toggle('selected',itinAdded);
+  chk.textContent=itinAdded?'✓':'';
+  chk.style.background=itinAdded?'var(--gold)':'transparent';
+  chk.style.borderColor=itinAdded?'var(--gold)':'var(--border)';
+  chk.style.color=itinAdded?'#fff':'transparent';
+  document.getElementById('sum-itin-row').style.display=itinAdded?'flex':'none';
+  updateTotal();
+}
+function toggleAddr(){
+  addrAdded=!addrAdded;
+  const card=document.getElementById('addr-card');
+  const chk=document.getElementById('addr-chk');
+  card.classList.toggle('selected',addrAdded);
+  chk.textContent=addrAdded?'✓':'';
+  chk.style.background=addrAdded?'var(--gold)':'transparent';
+  chk.style.borderColor=addrAdded?'var(--gold)':'var(--border)';
+  chk.style.color=addrAdded?'#fff':'transparent';
+  document.getElementById('sum-addr-row').style.display=addrAdded?'flex':'none';
+  updateTotal();
+}
+function goStep(n){
+  if(n===2){
+    if(!document.getElementById('biz1').value.trim()||!document.getElementById('industry').value){
+      alert('Por favor, preencha o nome da empresa e o setor.');return;
+    }
+  }
+  if(n===3){
+    const nm=document.getElementById('p-name').value.trim();
+    const em=document.getElementById('p-email').value.trim();
+    const ph=document.getElementById('p-phone').value.trim();
+    const ct=document.getElementById('p-country').value;
+    const ad=document.getElementById('p-addr').value.trim();
+    if(!nm||!em||!ph||!ct||!ad){alert('Por favor, preencha todos os campos obrigatórios.');return;}
+    if(!em.includes('@')){alert('E-mail inválido.');return;}
+  }
+  if(n===4){
+    document.getElementById('sum-biz').textContent=document.getElementById('biz1').value.trim();
+    document.getElementById('sum-type').textContent=selType;
+    document.getElementById('sum-loc').textContent=selLoc;
+    document.getElementById('sum-total').textContent='$'+(selPrice+(itinAdded?299:0)+(addrAdded?600:0)).toLocaleString();
+    document.getElementById('sum-itin-row').style.display=itinAdded?'flex':'none';
+  }
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('s'+n).classList.add('active');
+  document.querySelector('.form-card').scrollIntoView({behavior:'smooth',block:'start'});
+  if(n===4) initStripeElements();
+}
+function fmtCard(i){let v=i.value.replace(/\D/g,'').slice(0,16);i.value=v.replace(/(.{4})/g,'$1 ').trim();}
+function fmtExp(i){let v=i.value.replace(/\D/g,'').slice(0,4);if(v.length>=2)v=v.slice(0,2)+'/'+v.slice(2);i.value=v;}
+async function initStripeElements(){
+  const total = selPrice + (itinAdded?299:0) + (addrAdded?600:0);
+  const el = document.getElementById('payment-element');
+  if(el) el.innerHTML = '<div style="text-align:center;padding:20px;color:#888;font-size:13px;">⏳ Carregando formulário de pagamento...</div>';
+  
+  try {
+    // Initialize Stripe
+    if(!stripe) stripe = Stripe(STRIPE_PK);
+    
+    // Create payment intent
+    const resp = await fetch('https://evolv-stripe-server.onrender.com/create-payment-intent', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({amount: total * 100, currency: 'usd'})
+    });
+    
+    if(!resp.ok) {
+      const err = await resp.json();
+      throw new Error(err.error || 'Server error');
+    }
+    
+    const data = await resp.json();
+    if(!data.clientSecret) throw new Error('No client secret received');
+    
+    // Mount Stripe Elements
+    elements = stripe.elements({clientSecret: data.clientSecret, locale: 'auto'});
+    const payEl = elements.create('payment', {
+      layout: 'tabs',
+      paymentMethodOrder: ['card']
+    });
+    if(el) el.innerHTML = '';
+    payEl.mount('#payment-element');
+    
+  } catch(e) {
+    console.error('Stripe init error:', e);
+    if(el) el.innerHTML = '<div style="color:#e53e3e;font-size:13px;padding:12px;background:#fff5f5;border-radius:8px;border:1px solid #fed7d7;">❌ Erro ao carregar pagamento: ' + e.message + '<br><small>Tente recarregar a página.</small></div>';
+  }
+}
+async function pay(){
+  const btn=document.getElementById('pay-btn');
+  const msg=document.getElementById('payment-message');
+  btn.textContent='Processando...';btn.disabled=true;
+  msg.style.display='none';
+  if(!stripe||!elements){alert('Erro ao carregar o pagamento. Recarregue a página.');btn.textContent='🔒 Finalizar pagamento';btn.disabled=false;return;}
+  const{error}=await stripe.confirmPayment({
+    elements,
+    confirmParams:{
+      return_url: window.location.href,
+      payment_method_data:{
+        billing_details:{
+          name: document.getElementById('p-name')?.value || 'Cliente Evolv',
+          email: document.getElementById('p-email')?.value || ''
+        }
+      }
+    },
+    redirect:'if_required'
+  });
+  if(error){
+    msg.textContent=error.message;
+    msg.style.display='block';
+    btn.textContent='🔒 Finalizar pagamento';
+    btn.disabled=false;
+  } else {
+    goStep(5);
+  }
+}
+function resetAll(){
+  selType='LLC';selLoc='Florida';selPrice=650;itinAdded=false;
+  document.querySelectorAll('.field-input').forEach(i=>i.value='');
+  document.querySelectorAll('.field-select').forEach(s=>s.selectedIndex=0);
+  selectType('LLC');
+  document.querySelectorAll('.loc-item[id^="loc-"]').forEach(i=>i.classList.remove('selected'));
+  document.getElementById('loc-fl').classList.add('selected');
+  document.getElementById('itin-card').classList.remove('selected');
+  document.getElementById('itin-chk').textContent='';
+  document.getElementById('pay-btn').textContent='🔒 Finalizar pagamento';
+  document.getElementById('pay-btn').disabled=false;
+  goStep(1);
+}
+</script>
+</body>
+</html>
